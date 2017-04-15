@@ -1,0 +1,6 @@
+# IntelliJ IDEA files
+.idea/
+.gradle/
+
+# Java class files
+*.class
