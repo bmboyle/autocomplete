@@ -1,3 +1,3 @@
-[![Build Status](https://travis-ci.org/bmboyle/autocomplete.svg?branch=master)](https://travis-ci.org/npgall/concurrent-trees)
+[![Build Status](https://travis-ci.org/bmboyle/autocomplete.svg?branch=master)](https://travis-ci.org/bmboyle/autocomplete)
 
 # autocomplete
