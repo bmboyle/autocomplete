@@ -55,11 +55,11 @@ public class AutocompleteProvider {
      */
     public void train(String passage)
     {
-        Iterable<String> wordsInMessage = splitMessage(passage);
-        indexWords(wordsInMessage);
+        Iterable<String> wordsInPassage = splitPassage(passage);
+        indexWords(wordsInPassage);
     }
 
-    private Iterable<String> splitMessage(String passage)
+    private Iterable<String> splitPassage(String passage)
     {
         String delimiterRegex = "[^a-zA-Z_-]+";
         String[] words = passage.split(delimiterRegex);
