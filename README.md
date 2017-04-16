@@ -12,7 +12,7 @@ public class AutocompleteProvider {
   public List<Candidate> getWords(String fragment);
   
   // Uses a message of one or more words to train the auto-complete capability.
-  public void train(String message);
+  public void train(String passage);
 }
 
 public class Candidate {

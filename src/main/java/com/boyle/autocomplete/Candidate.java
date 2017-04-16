@@ -12,17 +12,23 @@ public class Candidate implements Comparable<Candidate>{
         this.confidence = confidence;
     }
 
+    /**
+     * Returns the autocomplete candidate word.
+     * @return The autocomplete candidate word.
+     */
     public String getWord()
     {
         return this.word;
     }
 
+    /**
+     * Returns the confidence of the candidate.
+     * @return The confidence of the candidate. A higher Integer is a higher confidence.
+     */
     public Integer getConfidence()
     {
         return this.confidence;
     }
-
-
 
     @Override
     public boolean equals(Object o) {

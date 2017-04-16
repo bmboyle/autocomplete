@@ -21,6 +21,11 @@ public class AutocompleteProvider {
         this.wordTree = new ConcurrentRadixTree(nodeFactory);
     }
 
+    /**
+     * Returns list of candidates ordered from highest confidence to lowest confidence.
+     * @param fragment An incomplete word to retrieve auto-complete candidates for.
+     * @return List of candidates ordered by confidence.
+     */
     public List<Candidate> getWords(String fragment)
     {
         Iterable<KeyValuePair<Integer>> keyValuePairs = wordTree.getKeyValuePairsForKeysStartingWith(fragment);
@@ -44,16 +49,20 @@ public class AutocompleteProvider {
         return candidates;
     }
 
-    public void train(String message)
+    /**
+     * Use a provided passage to train auto-complete predictions.
+     * @param passage A passage of words.
+     */
+    public void train(String passage)
     {
-        Iterable<String> wordsInMessage = splitMessage(message);
+        Iterable<String> wordsInMessage = splitMessage(passage);
         indexWords(wordsInMessage);
     }
 
-    private Iterable<String> splitMessage(String message)
+    private Iterable<String> splitMessage(String passage)
     {
         String delimiterRegex = "[^a-zA-Z_-]+";
-        String[] words = message.split(delimiterRegex);
+        String[] words = passage.split(delimiterRegex);
 
         return Arrays.asList(words);
     }
