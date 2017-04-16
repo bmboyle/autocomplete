@@ -13,3 +13,10 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     compile group: 'com.googlecode.concurrent-trees', name: 'concurrent-trees', version: '2.6.0'
 }
+
+test {
+    testLogging {
+        events "failed"
+        exceptionFormat "full"
+    }
+}
