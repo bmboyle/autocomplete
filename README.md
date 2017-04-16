@@ -43,7 +43,7 @@ Various test cases can be found in this autocomplete project demonstrating the u
 
 To build the autocomplete library and run the test cases, a gradle build script is provided. After cloning or downloading the autocomplete repository, the gradle build script can be run by using the `gradlew` or `gradlew.bat` wrapper files or by installing gradle manually. Depending on your choice, one of the following commands will build the library and run test cases. Upon running the command, a `build` directory will be generated with files including a JAR file and test results.
 ```
-gradle check
-./gradlew check
-gradlew.bat check
+gradle build
+./gradlew build
+gradlew.bat build
 ```
