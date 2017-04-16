@@ -1,7 +1,7 @@
 package com.boyle.autocomplete;
 
 
-public class Candidate {
+public class Candidate implements Comparable<Candidate>{
 
     public String word;
     public Integer confidence;
@@ -22,6 +22,8 @@ public class Candidate {
         return this.confidence;
     }
 
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -38,5 +40,10 @@ public class Candidate {
         int result = word != null ? word.hashCode() : 0;
         result = 31 * result + (confidence != null ? confidence.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public int compareTo(Candidate candidate) {
+        return this.confidence.compareTo(candidate.getConfidence());
     }
 }

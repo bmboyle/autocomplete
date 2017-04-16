@@ -7,6 +7,7 @@ import com.googlecode.concurrenttrees.radix.node.concrete.DefaultCharArrayNodeFa
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -24,6 +25,7 @@ public class AutocompleteProvider {
     {
         Iterable<KeyValuePair<Integer>> keyValuePairs = wordTree.getKeyValuePairsForKeysStartingWith(fragment);
         List<Candidate> candidates = transformPairsToCandidates(keyValuePairs);
+        Collections.sort(candidates, Collections.reverseOrder());
         return candidates;
     }
 
